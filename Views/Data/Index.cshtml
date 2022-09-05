@@ -1,0 +1,28 @@
+﻿@model IFormFile
+
+@if (TempData["loginSuccess"] != null)
+{
+    <div class="border p-3 mt-4">
+        <h4>Import Master Data</h4>
+        <hr />
+        <form class="row g-3" asp-controller="Data" asp-action="Import" method="POST" enctype="multipart/form-data">
+            <div class="col-auto">
+                <label for="uploadfile" class="visually-hidden">Password</label>
+                <input type="file" class="form-control" id="uploadfile" name="uploadFile">
+            </div>
+            <div class="col-auto">
+                <button type="submit" class="btn btn-primary mb-3">Import Data</button>
+            </div>
+        </form>
+    </div>
+    <br />
+}
+else
+{
+    <h3 style="color:red">Please login first to import data !</h3>
+}
+
+@if (TempData["success"] != null)
+{
+    <h5 style="color:green">@TempData["success"]</h5>
+}

@@ -1,0 +1,24 @@
+﻿@model Account
+<div class="container-lg border p-3 mt-4" style="max-width:500px">
+    <h2 class="text-center">Login to import data</h2>
+    <br />
+    <hr />
+    <form method="post" asp-action="Login">
+        <div class="mb-4">
+            <label for="username" class="form-label">Username</label>
+            <input type="text" class="form-control" id="username" aria-describedby="username" asp-for="Username">
+        </div>
+        <div class="mb-4">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" class="form-control" id="password" asp-for="Password">
+        </div>
+        <div class="text-center mb-4">
+            <button type="submit" class="btn btn-primary form-control">Login</button>
+        </div>
+    </form>
+    <br />
+</div>
+<br />
+@if (ViewData["loginFail"] != null){
+    <h4 style="color:red">@ViewData["loginFail"]</h4>
+}
