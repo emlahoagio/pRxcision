@@ -6,4 +6,20 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Microsoft.VisualStudio.Web.CodeGeneration.Design" />
+    <None Remove="Swashbuckle.AspNetCore" />
+    <None Remove="Views\Authentication\" />
+    <None Remove="Views\Data\" />
+    <None Remove="EPPlus" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.8" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.3.0" />
+    <PackageReference Include="EPPlus" Version="4.5.3.3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\Authentication\" />
+    <Folder Include="Views\Data\" />
+  </ItemGroup>
 </Project>
